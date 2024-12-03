@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoke Monitoring System</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #0078d7;
+            color: #fff;
+            padding: 1em 2em;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        header p {
+            margin: 0.5em 0 0;
+            font-size: 1.2em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+        section {
+            margin-bottom: 2em;
+        }
+        h2 {
+            color: #0078d7;
+            border-bottom: 2px solid #0078d7;
+            padding-bottom: 0.5em;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #fff;
+            margin: 0.5em 0;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .code-block {
+            background: #282C34; /* Arduino IDE dark background */
+            color: #ABB2BF; /* Light text color */
+            padding: 1em;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            position: relative;
+            line-height: 1.5;
+        }
+        .code-block::before {
+            content: "Copy code";
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            font-size: 0.8em;
+            color: #61AFEF; /* Light blue color */
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2em 0.6em;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        /* Syntax highlighting */
+        .code-block span.keyword { color: #C678DD; } /* Purple for keywords */
+        .code-block span.function { color: #61AFEF; } /* Light blue for functions */
+        .code-block span.comment { color: #5C6370; } /* Gray for comments */
+        .code-block span.string { color: #98C379; } /* Green for strings */
+        .code-block span.constant { color: #D19A66; } /* Orange for constants */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+        .image-gallery img {
+            max-width: 20%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-galler {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+        .image-galler img {
+            max-width: 80%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #0078d7;
+            color: #fff;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .image-gallery img {
+                max-width: 90%;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Smoke Monitoring System</h1>
+        <p>An Arduino-based project to monitor and detect smoke levels</p>
+    </header>
+    <div class="container">
+        <!-- Project Description -->
+        <section>
+            <h2>Project Description</h2>
+            <p>
+                This Smoke Monitoring System is built using an Arduino, MQ-2 smoke sensor, and an OLED display.
+                It continuously monitors smoke levels and provides real-time feedback. When smoke levels
+                exceed a predefined threshold, the system alerts the user by displaying "Smoke Detected!".
+            </p>
+        </section>
+
+        <!-- Components List -->
+        <section>
+            <h2>Component List</h2>
+            <ul>
+                <li>1. Arduino Uno </li>
+                <li>2. MQ-2 Smoke Sensor</li>
+                <li>3. Adafruit SSD1306 OLED Display</li>
+                <li>4. Connecting Wires</li>
+                <li>5. Breadboard</li>
+                <li>6. 5V Power Supply</li>
+            </ul>
+        </section>
+
+        <!-- Component Images -->
+        <section>
+            <h2>Component Images</h2>
+            <div class="image-gallery">
+                 
+                    <img src="https://raw.githubusercontent.com/Mehedi-Hasan-soft-web-support/Smoke-Detection-Arduino-with-OLED-Display/main/Untitled%20design%20(18).png" alt="Arduino Uno">
+                    <img src="https://raw.githubusercontent.com/Mehedi-Hasan-soft-web-support/Smoke-Detection-Arduino-with-OLED-Display/main/mq2.png" alt="MQ-2 Smoke Sensor">
+                    <img src="https://raw.githubusercontent.com/Mehedi-Hasan-soft-web-support/Smoke-Detection-Arduino-with-OLED-Display/main/buzzer.png" alt="Buzzer">
+                    <img src="https://raw.githubusercontent.com/Mehedi-Hasan-soft-web-support/Smoke-Detection-Arduino-with-OLED-Display/main/oled.png" alt="OLED Display">
+                    <img src="https://raw.githubusercontent.com/Mehedi-Hasan-soft-web-support/Smoke-Detection-Arduino-with-OLED-Display/main/breadboard.png" alt="Breadboard">
+                    <img src="https://raw.githubusercontent.com/Mehedi-Hasan-soft-web-support/Smoke-Detection-Arduino-with-OLED-Display/main/jumper.png" alt="Jumper Wires">
+            </div>
+        </section>
+
+        <!-- Circuit Diagram -->
+        <section>
+            <h2>Circuit Diagram</h2>
+            <div class="image-galler">
+                <img src="https://raw.githubusercontent.com/Mehedi-Hasan-soft-web-support/Smoke-Detection-Arduino-with-OLED-Display/main/Circuit%20Diagram%20(1).png" alt="Circuit Diagram">
+            </div>
+        </section>
+
+        <!-- Code Viewer -->
+        <section>
+            <h2>Project Code</h2>
+            <pre class="code-block">
+<span class="comment">// Include required libraries</span>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+<span class="comment">// OLED display configuration</span>
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define OLED_RESET -1
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+
+<span class="comment">// Pin configuration</span>
+const int smokeSensorPin = A1;
+const int threshold = 200;
+const int buzzerPin = 8;
+
+<span class="keyword">void</span> setup() {
+  Serial.begin(115200);
+
+  <span class="function">if</span> (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println(F(<span class="string">"SSD1306 allocation failed"</span>));
+    <span class="keyword">for</span> (;;);
+  }
+
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(SSD1306_WHITE);
+  display.setCursor(0, 0);
+  display.println(<span class="string">"Smoke Monitoring System"</span>);
+  display.display();
+  delay(3000);
+
+  pinMode(buzzerPin, OUTPUT);
+}
+
+<span class="keyword">void</span> loop() {
+  int smokeValue = analogRead(smokeSensorPin);
+
+  display.clearDisplay();
+  <span class="function">if</span> (smokeValue >= threshold) {
+    display.println(<span class="string">"Smoke Detected!"</span>);
+    digitalWrite(buzzerPin, HIGH);
+  } <span class="keyword">else</span> {
+    display.println(<span class="string">"You are Safe"</span>);
+    digitalWrite(buzzerPin, LOW);
+  }
+  display.display();
+  delay(1000);
+}
+            </pre>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Smoke Monitoring System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
